@@ -1,19 +1,17 @@
-# -*- coding: utf-8 -*-
-# MySQL Workbench Python script
-# <description>
-# Written in MySQL Workbench 8.0.38
+import mysql.connector
+from mysql.connector import Error
 
-import grt
-#import mforms
+
 def create_database():
     try:
         # Connect to the MySQL server (not specifying a database)
         connection = mysql.connector.connect(
-            host='localhost',         # Update as needed
-            user='root',              # Update with your MySQL username
-            password='your_password'  # Update with your MySQL password
+            host='localhost',  # Update as needed
+            user='root',  # Update with your MySQL username
+            password='Mamado$m3s7007' # Update with your MySQL password
+            database = "alx_book_store"
         )
-        
+
         if connection.is_connected():
             print('Connected to MySQL server successfully.')
 
@@ -35,6 +33,7 @@ def create_database():
             cursor.close()
             connection.close()
             print("MySQL connection is closed.")
+
 
 if __name__ == "__main__":
     create_database()
